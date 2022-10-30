@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Développement mobile</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    /* change the color of the navigation bar and make its ends circular */
+    .navbar{
+        background-color: black;
+        text-align: center;
+    }
+
+    /* nav elements come in single horizontal line */
+    .navbar li{
+        display:inline-block;
+        text-align: center;
+        list-style: none; 
+        margin: 13px;
+     }
+     /* Avoids background being removed by being overflown */
+    .navbar ul{
+        overflow: auto;
+    }
+    /* adding padding to the all the elements present in the navbar */
+    .navbar li a{
+        text-decoration: none;
+        color: white;
+    }
+    /* style the menu available in the navigation bar */
+    .navbar input{
+        border: 2px solid black;
+        border-radius: 14px;
+        padding: 3px 17px;
+        width: 129px;
+    }
+    /* hover effect to change element color when hovering over it */
+    .navbar li a:hover{
+            color: red;
+    }
+
+    /* Dropdown Button */
+    .dropbtn {
+    font-family: Georgia;
+    background-color: #000000;
+    color: white;
+    padding: 16px;
+    font-size: 14px;
+    border: none;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+    font-family: Georgia;
+    text-align: left;
+    position:static;
+    display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+    font-family: Georgia;
+    display:inline-block;
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    min-width: 160px;
+    z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+    font-family: Georgia;
+    font-size: 14px;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {display: block;}
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {background-color: #000000;}
+
+    .dropbtn:hover{
+            color: red;
+    }
+
+    .mySlides {display:none;}
+
+    div.a {
+    text-indent: 50px;
+    }
+    .button{
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    }
+    .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    }
+    .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+    }
+    .button:hover span {
+    padding-right: 30px;
+    }
+    .button:hover span:after {
+    opacity: 2;
+    right: 0;
+    }
+    .container-fluid {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    }
+
+</style>
+<header style="padding: 0;">
+    <nav class="navbar" style="position:fixed; width: 100%;">
+        <ul>
+            <li style="font-family: Georgia;"><a href="C:\Users\Lucas Rambert\Desktop\BTS SIO\Bloc 1\SIO work\Work\First_Website\Accueil\Accueil.html">Accueil</a></li>
+            <li><a href="C:\Users\Lucas Rambert\Desktop\BTS SIO\Bloc 1\SIO work\Work\First_Website\A propos de nous\A propos de nous.html">À propos de nous</a></li>
+            <li style="font-family: Georgia;">
+                <div class="dropdown">
+                <button class="dropbtn"><a href="C:\Users\Lucas Rambert\Desktop\BTS SIO\Bloc 1\SIO work\Work\First_Website\Services\Services.html">Services</a></button>
+                <div class="dropdown-content">
+                  <a href="C:\Users\Lucas Rambert\Desktop\BTS SIO\Bloc 1\SIO work\Work\First_Website\Developpement web\Developpement web.html">Développement web</a>
+                  <a href="C:\Users\Lucas Rambert\Desktop\BTS SIO\Bloc 1\SIO work\Work\First_Website\Developpement mobile\Developpement mobile.html">Développement mobile</a>
+                  <a href="C:\Users\Lucas Rambert\Desktop\BTS SIO\Bloc 1\SIO work\Work\First_Website\Maintenance de site web\Maintenance de site web.html">Maintenance de site web</a>
+                  <a href="C:\Users\Lucas Rambert\Desktop\BTS SIO\Bloc 1\SIO work\Work\First_Website\Maintenance des programmes mobile\Maintenance des programmes mobile.html">Maintenance des programmes mobiles</a>
+                  <a href="C:\Users\Lucas Rambert\Desktop\BTS SIO\Bloc 1\SIO work\Work\First_Website\Accompagnement et gestion\Accompagnement et gestion.html">Accompagnement et gestion</a>
+                </div>
+              </div>
+            </li>
+            <li><a href="C:\Users\Lucas Rambert\Desktop\BTS SIO\Bloc 1\SIO work\Work\First_Website\Contactez-nous\Contactez-nous.html">Contactez-nous</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<body>
+    <table style="width: 100%;border: 55px solid; border-color: rgb(0, 0, 0); border-top: 0px; border-left: 0px; border-right: 0px; background-color: rgb(255, 255, 255); object-fit: contain;padding-top:70px;padding-bottom: 10px;">
+
+        <tr align="center">
+            <td align="center" colspan="2">
+                <img src="mobile-phone-g61f2cf69b_1920.jpg" align="center" style="width:100%;height: 450px;padding-bottom: 60px; margin: 0;object-fit: cover;">
+            </td>
+        </tr>
+
+        <tr align="center" style="width:50rem;">
+            <td align="center" colspan="2">
+                <p style="text-align: center; font-family: sans-serif;font-size: 40px;padding-bottom: 80px;"><b>Développement d'applications mobiles<br><br><span style="font-size: 25px;">⛛</span></b></p>
+            </td>
+        </tr>
+
+        <tr  align="center" style="height: 20rem;width:50rem;">
+            <td>
+                <p style="text-align: left; font-family: sans-serif;font-size: 34px;padding-bottom: 115px;padding-left: 70px;padding-right: 15px;"><b>Utiliser le développement d'applications mobiles pour créer des solutions commerciales intelligentes</b></p>
+            </td>
+            <td>
+                <p style="text-align: left; font-family: Helvetica;font-size: 22px;padding-bottom: 115px;padding-right: 70px">Agrandissez et développez votre entreprise via des applications incitatives qui augmentent la distribution et favorisent l'engagement. Éloignez-vous de la concurrence et poursuivez votre parcours de transformation numérique en utilisant la technologie et l'expertise mobiles.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center" colspan="2">
+                <p style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif;font-size: 28px;padding-bottom: 10px;"><u>Marques avec lesquelles nous avons travaillé</u></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center" colspan="2" style="padding-bottom: 70px;">
+                    <img src="facebook.png" style="width: 70px;height:70px; object-fit:cover;padding-right: 25px;">
+                    <img src="google.png" style="width:  70px;height: 70px; object-fit: cover;padding-right: 25px;">
+                    <img src="teams.png" style="width:  70px;height: 70px; object-fit: cover;padding-right: 25px;">
+                    <img src="disney.png" style="width:  130px;height: 70px; object-fit: cover;padding-right: 25px;">
+                    <img src="BBC.png" style="width:  70px;height: 70px; object-fit: cover;padding-right: 25px;">
+                    <img src="emaar.png" style="width:  70px;height: 70px; object-fit: cover;padding-right: 25px;">
+                    <img src="art.jpeg" style="width:  70px;height: 70px; object-fit: cover;padding-right: 25px;">
+                    <img src="viacom.png" style="width:  70px;height: 70px; object-fit: cover;padding-right: 25px;">
+                    <img src="myt.png" style="width:  110px;height: 70px; object-fit: cover;">
+            </td>
+        </tr>
+
+        <tr  align="center" style="height: 35.5rem;width:50rem;">
+            <td style="padding-left: 40px;vertical-align: top;padding-top: 40px;">
+                <ol align="center">
+                    <p style="text-align: left; font-size:30px; font-family: sans-serif;"><b>Qu'est-ce que le développement d'applications mobiles ?</b></p>
+                    <br>
+                    <p style="text-align: left; font-size:18px;font-family:Tahoma;">Même si nous avons entendu le terme développement d'applications mobiles des milliers de fois dans nos vies, nous ne pouvons pas élaborer sur le terme développement d'applications mobiles avec une définition appropriée. Si nous parlons de la définition du développement d'applications mobiles; c'est le processus de création de logiciels pour les téléphones mobiles et autres appareils tels que les tablettes, les ordinateurs de bureau, les iPad, etc. Le logiciel peut être préinstallé sur les appareils ou les utilisateurs peuvent l'obtenir en le téléchargeant depuis l'App Store ou les navigateurs mobiles.</p>
+                </ol>
+            </td>
+            <td>
+                    <img src="app.jpg" align="right" style="width:  650px;height: 550px; object-fit: cover;padding-bottom: 100px;">
+            </td>
+        </tr>
+
+        <tr  align="center" style="height: 35.5rem;width:50rem;">
+            <td colspan="2" style="padding-left: 40px; vertical-align:top;padding-right: 40px; padding-bottom: 0;">
+                <p style="text-align: left; font-size:40px; font-family: sans-serif;"><b>Technologies sur lesquelles nous travaillons</b></p>
+                <br>
+                <br>
+                <p style="text-align: left; font-size:30px; font-family: sans-serif;"><b><u>Java Script</u></b></p>
+                <p style="text-align: left; font-size:24px; font-family: sans-serif;"><b>Fonctionnalités</b></p>
+                <br>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Un langage léger, indépendant de la plate-forme et basé sur un modèle.
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Possède diverses fonctions intégrées telles que la date et l'heure.
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Fonctionne mieux avec la programmation orientée objet et le typage dynamique.
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Validation précise pour le calcul côté client et les entrées utilisateur.
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+
+                <p style="text-align: left; font-size:30px; font-family: sans-serif;"><b><u>Kotlin</u></b></p>
+                <p style="text-align: left; font-size:24px; font-family: sans-serif;"><b>Fonctionnalités</b></p>
+                <br>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Un langage de programmation open-source.
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Réduit le temps de démarrage des applications mobiles Android.
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        A une syntaxe de code parfaite et compacte.
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Fonctionne bien même avec une surcharge de l'opérateur.
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+
+                <p style="text-align: left; font-size:30px; font-family: sans-serif;"><b><u>C#</u></b></p>
+                <p style="text-align: left; font-size:24px; font-family: sans-serif;"><b>Fonctionnalités</b></p>
+                <br>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Un langage de programmation de pointe, structuré et polyvalent.
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Possède des bibliothèques de fonctions intégrées pour faciliter les développeurs d'applications.
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Garantit la sécurité d'une structure de code avec un code de type sécurisé.
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Est interopérable et actualisable.
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+
+                <p style="text-align: left; font-size:30px; font-family: sans-serif;"><b><u>Python</u></b></p>
+                <p style="text-align: left; font-size:24px; font-family: sans-serif;"><b>Fonctionnalités</b></p>
+                <br>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Garantit un développement rapide des applications.
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Peut "coller" des contenus existants les uns avec les autres.
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        A un code discernable et propre car il utilise l'espace.
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Peut aider à créer des interfaces graphiques en utilisant l'une des nombreuses bibliothèques standard.
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+
+                <p style="text-align: left; font-size:30px; font-family: sans-serif;"><b><u>PHP</u></b></p>
+                <p style="text-align: left; font-size:24px; font-family: sans-serif;"><b>Fonctionnalités</b></p>
+                <br>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Un langage open-source, interprété et composé de manière inexacte.
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Accès aux journaux en temps réel.
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Peut créer des messages d'erreur avec des contraintes de rapport prédéfinies.
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Est viable avec tous les ensembles de données et pratiquement tous les serveurs locaux.
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+
+                <p style="text-align: left; font-size:30px; font-family: sans-serif;"><b><u>Swift</u></b></p>
+                <p style="text-align: left; font-size:24px; font-family: sans-serif;"><b>Fonctionnalités</b></p>
+                <br>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Offre Xcode - un IDE autonome.
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Est de type sûr et aide à trouver les erreurs au début du processus de compilation.
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Fonctionnalité de gestion des erreurs native intégrée.
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Offre diverses fonctionnalités de gestion de la mémoire intégrées.
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+
+                <p style="text-align: left; font-size:30px; font-family: sans-serif;"><b><u>Objective C</u></b></p>
+                <p style="text-align: left; font-size:24px; font-family: sans-serif;"><b>Fonctionnalités</b></p>
+                <br>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Fonctionne bien avec le typage statique et dynamique.
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Les fonctionnalités de Smalltalk offrent une syntaxe de message identique à celle du langage naturel.
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Collecteur d'ordures automatique.
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Objets simples à introspecter.
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+
+                <p style="text-align: left; font-size:30px; font-family: sans-serif;"><b><u>Java</u></b></p>
+                <p style="text-align: left; font-size:24px; font-family: sans-serif;"><b>Fonctionnalités</b></p>
+                <br>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Un puissant langage de programmation côté serveur.
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Compilation et interprétation faciles.
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Offre des fonctionnalités de sécurité exclusives pour les programmes.
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Fournit l'accès aux modificateurs et au bac à sable de la machine virtuelle.
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+
+                <p style="text-align: left; font-size:30px; font-family: sans-serif;"><b><u>HTML 5</u></b></p>
+                <p style="text-align: left; font-size:24px; font-family: sans-serif;"><b>Fonctionnalités</b></p>
+                <br>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        HTML 5 offre diverses fonctionnalités telles que les illustrations vectorielles, améliorant l'utilisation d'Adobe Flash lors de la création de sites.
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        HTML 5 propose des étiquettes prédéfinies pour afficher les données d'en-tête et de pied de page, les photographies, les légendes et d'autres
+                        <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;"> composants comparables.</div>
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        A tué en utilisant le trait "type" pour le contenu et les scripts.
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Fonctionne bien même avec plusieurs balises et composants multimédias pour afficher le contenu.
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+
+                <p style="text-align: left; font-size:30px; font-family: sans-serif;"><b><u>Ruby</u></b></p>
+                <p style="text-align: left; font-size:24px; font-family: sans-serif;"><b>Fonctionnalités</b></p>
+                <br>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Fonctionne bien avec le typage dynamique et canard.
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        A une syntaxe flexible et compacte.
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Dispose de diverses bibliothèques étendues intégrées de fonctions et de modules.
+                    </div>
+                    <div style="text-indent: 40px;text-align: left; font-size:20px; font-family: Tahoma;">
+                        Gère exceptionnellement l'exception et la surcharge de l'opérateur.
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+            </td>
+        </tr>
+        <tr  align="center" style="width:50rem;">
+            <td colspan="2" align="center">
+                <p style="text-align: center; font-size:30px; font-family: sans-serif; padding-bottom: 0;"><b><u>Processus que nous suivons</u></b></p><br>
+                <img src="appdev.png" style="width: 900px;height:492px; object-fit:fill; padding-top: 0;">
+                <br><br><br><br><br><br>
+            </td>
+        </tr>
+        <tr  align="center" style="width:50rem;">
+            <td colspan="2" align="center">
+                <p style="text-align: center; font-size:30px; font-family: sans-serif; padding-bottom: 0;"><b><u>Coût de développement d'applications mobiles</u></b></p><br>
+                <img src="Application mobile.png" style="width: 900px;height:506px; object-fit:fill; padding-top: 0;">
+                <br><br><br><br><br><br>
+            </td>
+        </tr>
+
+        <tr  align="center" style="height: 40rem;width:50rem;">
+            <td colspan="2" align="center" style="vertical-align: top;">
+                <p style="text-align: center; font-size:30px; font-family: sans-serif; padding-bottom: 0;"><b><u>Qui devrait faire partie de l'équipe de développement d'applications mobiles ?</u></b></p><br><br>
+                <div style="padding-left: 40px;text-align: left; font-size:20px; font-family: Tahoma;padding-right: 40px;">
+                    <b>Propriétaire du produit</b>
+                    <br>
+                    •&nbsp;&nbsp;&nbsp;Chaque idée d'application mobile a un propriétaire de produit. Le propriétaire du produit peut être la personne qui a proposé l'idée, dans de nombreux cas, il s'agit d'un individu, mais parfois il peut s'agir d'une équipe d'individus qui ont proposé l'idée et ont aidé au processus de remue-méninges. Le propriétaire du produit est responsable de fournir des informations précises sur les caractéristiques, les fonctionnalités et le fonctionnement de l'ensemble de l'application mobile à l'équipe de développement de l'application.
+                    <br>
+                    <br>
+                    <b>Analyste d'affaires</b>
+                    <br>
+                    •&nbsp;&nbsp;&nbsp;Un analyste commercial ou BA est une personne qui enquêtera sur les conditions préalables de l'entreprise et aidera à définir les bons objectifs afin que la manière de gérer le développement soit idéale pour votre idée d'application exceptionnelle. En particulier, un BA dirigera l'exposition pour comprendre votre idée d'application, répartira les prérequis pratiques et non utiles, obtiendra le coût de développement estimé du projet et aidera au prototypage d'une interface intuitive.
+
+                    Avec tout pris en compte, les BA sont une partie importante de l'équipe de développement d'applications. Ils se souviennent généralement de l'estime de l'entreprise, examinent sans cesse le processus de développement et aident les clients à atteindre les objectifs dont ils ont parlé dès le départ.
+                    <br>
+                    <br>
+                    <b>Chef de projet</b>
+                    <br>
+                    •&nbsp;&nbsp;&nbsp;Un chef de projet ou un PM est chargé de gérer l'ensemble du projet de développement d'applications mobiles et de garantir qu'il dispose de chacune des caractéristiques et fonctionnalités finalisées, terminées à temps dans le cadre du plan financier et de la qualité établis. Le chef de projet est chargé de maintenir le processus de développement de l'application fluide et précis.
+                    <br>
+                    <br>
+                    <b>Concepteur UI/UX</b>
+                    <br>
+                    •&nbsp;&nbsp;&nbsp;Un concepteur UI/UX est une autre partie importante du processus de développement d'applications mobiles. Cette personne est celle qui rendra votre produit final instinctif, facile à utiliser et séduisant. Ils concevront chaque fonction de votre application mobile et s'assureront en même temps que tout ce qui se trouve à l'intérieur de l'application est amélioré pour offrir la meilleure expérience utilisateur pour un engagement accru de l'utilisateur.
+                    <br>
+                    <br>
+                    <b>Ingénieur QA</b>
+                    <br>
+                    •&nbsp;&nbsp;&nbsp;Enfin, un Ingénieur Assurance Qualité ou un Spécialiste QA, ou tout simplement Testeur, est celui qui assure le fonctionnement de votre application mobile. Il s'agit d'un expert qui, comme son nom l'indique, est garant de la qualité de votre application mobile. Par conséquent, un ingénieur QA garantit que votre application fonctionne bien sans aucun bogue, se configure avec différents appareils et plates-formes et répond dans l'ensemble à toutes les nécessités.
+                    <br>
+                    <br>
+                    <b>Développeur d'applications mobiles</b>
+                    <br>
+                    •&nbsp;&nbsp;&nbsp;Vient ensuite le développeur d'applications mobiles. Les développeurs sont des individus qui transforment tous les formats UI/UX en une application mobile fonctionnelle. Par conséquent, ils doivent savoir comment travailler avec les frameworks que vous avez choisis, les langages et même les outils tiers multiplateformes. Le développeur d'applications mobiles peut être une équipe de développeurs en fonction des exigences de votre projet. Vous pouvez embaucher une équipe de développeurs d'applications composée de divers développeurs tels que des développeurs d'applications iPhone, des développeurs d'applications Android, des développeurs front-end, des développeurs back-end, etc., en fonction des exigences de votre projet.
+                    <br>
+                    <br>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <p align="center">
+                    <a href="C:\Users\Lucas Rambert\Desktop\BTS SIO\Bloc 1\SIO work\Work\First_Website\Contactez-nous\Contactez-nous.html" class="button" style="font-size: 18px; background-color: black; color: white;padding: 20px 70px; font-family: Georgia;"><span>Contactez-nous</span></a>
+                </p>
+                <br>
+            </td>
+        </tr>
+    </table>
+
+
+
+
+    <p style="padding: 0; color: rgb(0, 0, 0);">
+        <nav class="navbar" style="background-color: white;">
+            <ul style="color: black;">
+                <li>Email: company@gmail.com</li>
+                <li>Numéro de téléphone: +230 59465738</a></li>
+            </ul>
+        </nav>
+    </p>
+</body>
+</html>
