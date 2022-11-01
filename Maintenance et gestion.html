@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenance et gestion</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    /* change the color of the navigation bar and make its ends circular */
+    .navbar{
+        background-color: black;
+        text-align: center;
+        font-family: Georgia;
+        font-size: 14px;
+    }
+    /* nav elements come in single horizontal line */
+    .navbar li{
+        display:inline-block;
+        text-align: center;
+        list-style: none; 
+        margin: 13px;
+     }
+     /* Avoids background being removed by being overflown */
+    .navbar ul{
+        overflow: auto;
+    }
+    /* adding padding to the all the elements present in the navbar */
+    .navbar li a{
+        text-decoration: none;
+        color: white;
+    }
+    /* style the menu available in the navigation bar */
+    .navbar input{
+        border: 2px solid black;
+        border-radius: 14px;
+        padding: 3px 17px;
+        width: 129px;
+    }
+    /* hover effect to change element color when hovering over it */
+    .navbar li a:hover{
+            color: red;
+    }
+
+    /* Dropdown Button */
+    .dropbtn {
+    background-color: #000000;
+    color: white;
+    padding: 16px;
+    font-size: 14px;
+    border: none;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+    text-align: left;
+    position:static;
+    display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+    display:inline-block;
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    min-width: 160px;
+    z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {display: block;}
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {background-color: #000000;}
+
+    .dropbtn:hover{
+            color: red;
+    }
+    .button{
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    }
+    .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    }
+    .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+    }
+    .button:hover span {
+    padding-right: 30px;
+    }
+    .button:hover span:after {
+    opacity: 2;
+    right: 0;
+    }
+</style>
+<header style="padding: 0;">
+    <nav class="navbar">
+        <ul style="font-family: Georgia; font-size:14px;">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">À propos de nous</a></li>
+            <li>
+                <div class="dropdown">
+                <button class="dropbtn" style="font-size: 14px;font-family:Georgia;">Services</button>
+                <div class="dropdown-content">
+                  <a href="#">Développement web</a>
+                  <a href="#">Développement mobile</a>
+                  <a href="#">Maintenance de site web</a>
+                  <a href="#">Maintenance des programmes mobiles</a>
+                  <a href="#">Maintenance et gestion</a>
+                </div>
+              </div>
+            </li>
+            <li><a href="#">Contactez-nous</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <table style="width: 100%;border: 55px solid; border-color: rgb(0, 0, 0); border-top: 0px; border-left: 0px; border-right: 0px; background-color: rgb(255, 255, 255); object-fit: contain;padding-top:1px;padding-bottom: 10px;padding-left: 50xpx;padding-right: 50px;">
+
+        <tr align="center">
+            <td align="center" colspan="2">
+                <img src="head.jpg" align="center" style="width:100%;height: 450px;padding-bottom: 60px; margin: 0;object-fit: cover;">
+            </td>
+        </tr>
+
+        <tr align="center" style="width:50rem;">
+            <td align="center" colspan="2">
+                <p style="text-align: center; font-family: sans-serif;font-size: 40px;padding-bottom: 80px;"><b>Maintenance et gestion<br><br><span style="font-size: 25px;">⛛</span></b></p>
+            </td>
+        </tr>
+
+        <tr  align="center" style="width:50rem;">
+            <td>
+                <p style="text-align: left; font-family: sans-serif;font-size: 34px;padding-bottom: 10px;padding-left: 70px;padding-right: 15px;"><b>Qu'est-ce que la maintenance<br>logicielle ?</b></p>
+            </td>
+            <td>
+                <p style="text-align: left; font-family: Helvetica;font-size: 22px;padding-bottom: 10px;padding-right: 70px">La maintenance logicielle est un vaste processus de gestion qui vient après la livraison du logiciel. Cela inclut des aspects tels que l'optimisation des performances du logiciel avec un développement avancé, la minimisation de l'erreur, l'élimination des éléments de développement inutiles. Contrairement au développement logiciel, la maintenance logicielle est une activité continue.</p>
+            </td>
+        </tr>
+
+        <tr  align="center" style="height: 20rem;width:50rem;">
+            <td>
+                <p style="text-align: left; font-family: sans-serif;font-size: 34px;padding-bottom: 10px;padding-left: 70px;padding-right: 15px;"><b>Qu'est-ce que la Gestion du site Web ?</b></p>
+            </td>
+            <td>
+                <p style="text-align: left; font-family: Helvetica;font-size: 22px;padding-bottom: 10px;padding-right: 70px">La gestion de site Web est l'ensemble des processus utilisés pour garantir que votre site Web est professionnel, à jour et fonctionne comme prévu. Il englobe la maintenance générale, la sécurité et le développement à long terme du site Web, ainsi que l'organisation de votre diffusion de contenu et de votre stratégie marketing.</p>
+            </td>
+        </tr>
+        <tr  align="center" style="width:50rem;">
+            <td>
+                <p style="text-align: left; font-family: sans-serif;font-size: 34px;padding-bottom: 80px;padding-left: 70px;padding-right: 15px;"><b>Qu'est-ce que la Gestion des applications ?</b></p>
+            </td>
+            <td>
+                <p style="text-align: left; font-family: Helvetica;font-size: 22px;padding-bottom: 80px;padding-right: 70px">La gestion des applications (AM) est le processus du cycle de vie des applications logicielles, qui couvre le fonctionnement d'une application, sa maintenance, son contrôle de version et ses mises à niveau, de sa création à sa mise hors-service. Les services de gestion des applications sont une initiative à l'échelle de l'entreprise qui fournit une gouvernance conçue pour garantir des performances optimales et aussi efficaces que possible, de l'expérience utilisateur à l'intégration avec les fonctions de back-office d'entreprise telles que les fonctions de base de données, d'ERP et de Cloud SaaS comme CRM.</p>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2">
+                <p style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif;font-size: 28px;padding-bottom: 10px;"><u>Marques avec lesquelles nous avons travaillé</u></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center" colspan="2" style="padding-bottom: 70px;">
+                    <img src="facebook.png" style="width: 70px;height:70px; object-fit:cover;padding-right: 25px;">
+                    <img src="google.png" style="width:  70px;height: 70px; object-fit: cover;padding-right: 25px;">
+                    <img src="teams.png" style="width:  70px;height: 70px; object-fit: cover;padding-right: 25px;">
+                    <img src="disney.png" style="width:  130px;height: 70px; object-fit: cover;padding-right: 25px;">
+                    <img src="BBC.png" style="width:  70px;height: 70px; object-fit: cover;padding-right: 25px;">
+                    <img src="emaar.png" style="width:  70px;height: 70px; object-fit: cover;padding-right: 25px;">
+                    <img src="art.jpeg" style="width:  70px;height: 70px; object-fit: cover;padding-right: 25px;">
+                    <img src="viacom.png" style="width:  70px;height: 70px; object-fit: cover;padding-right: 25px;">
+                    <img src="myt.png" style="width:  110px;height: 70px; object-fit: cover;">
+            </td>
+        </tr>
+
+        <tr  align="center" style="height: 35.5rem;width:50rem;">
+            <td style="padding-left: 40px;vertical-align: top;padding-top: 40px; padding-bottom: 70px;">
+                <ol align="center">
+                    <p style="text-align: left; font-size:30px; font-family: sans-serif;"><b>Que fait un gestionnaire d'applications ?</b></p>
+                    <br>
+                    <p style="text-align: left; font-size:18px;font-family:Tahoma;"><u>Les fonctions clés d'un responsable des applications sont les suivantes :</u>
+                        <br>
+                        <br>
+                        ● Identifier les opportunités commerciales pour de nouvelles applications en analysant les workflows et en déterminant les gains d'efficacité.
+                        <br>
+                        <br>
+                        ● Déterminer si de nouvelles fonctionnalités applicatives doivent être achetées, souscrites via SaaS ou développées en interne.
+                        <br>
+                        <br>
+                        ● Si le logiciel est acheté, le responsable des applications supervise l'acquisition de l'infrastructure, l'installation, la configuration et le cycle de vie des applications.
+                        <br>
+                        <br>
+                        ● En cas de développement en interne, le responsable des applications collabore avec les entités de développement, DevSecOps et les entités pour s'assurer que l'application répond aux besoins définis et aux exigences de l'interface utilisateur.
+                        <br>
+                        <br>
+                        ● Dans les deux cas, les responsables des applications dirigent le déploiement pour éviter qu'un problème éventuel ne devienne un obstacle majeur.
+                        <br>
+                        <br>
+                        ● Dirige la résolution des problèmes en résolvant les problèmes techniques au fur et à mesure qu'ils se produisent et développe une solution pour résoudre les causes profondes des problèmes.
+                        <br>
+                        <br>
+                        ● Détermine quand une formation est nécessaire et supervise celle des équipes informatiques et d'utilisateurs.
+                        <br>
+                        <br>
+                        ● Garantir l'utilité de l'application, ou déterminer si l'application doit être abandonnée au profit d'une application plus récente ou en raison de l'élimination d'une fonctionnalité professionnelle
+                    </p>
+                </ol>
+            </td>
+            <td>
+                    <img src="1.jpg" align="right" style="width:  650px;height: 550px; object-fit: cover; vertical-align: middle;">
+            </td>
+        </tr>
+
+        <tr  align="center" style="height: 35.5rem;width:50rem;">
+            <td>
+                    <img src="2.jpg" align="right" style="width:  650px;height: 550px; object-fit: cover;vertical-align: middle;">
+            </td>
+            <td style="padding-left: 40px;vertical-align: top;padding-top: 40px; padding-bottom: 70px;">
+                <ol align="center">
+                    <p style="text-align: left; font-size:30px; font-family: sans-serif;"><b>Que fait un gestionnaire de site Web ?</b></p>
+                    <br>
+                    <p style="text-align: left; font-size:18px;font-family:Tahoma;"><u>La gestion d'un site Web implique les tâches suivantes :</u></p>
+                    <br>
+                    <br>
+                    <p style="text-align: left; font-size:18px;font-family:Tahoma;">
+                    ● Effectuer la maintenance.
+                    <br>
+                    <br>
+                    ● Mettre en œuvre des mises à jour de conception.
+                    <br>
+                    <br>
+                    ● Planifier et fournir des mises à jour de contenu.
+                    <br>
+                    <br>
+                    ● Mettre en œuvre des stratégies marketing.
+                    <br>
+                    <br>
+                    ● Garantir la sécurité du site Web.
+                    <br>
+                    <br>
+                    ● Fournir une assistance Web au personnel et aux clients.
+                    <br>
+                    <br>
+                    ● Planifier la croissance future sur les marchés nationaux et internationaux.
+                    <br>
+                    <br>
+                    ● Obtenir une expérience utilisateur cohérente sur tous les canaux.
+                    <br>
+                    <br>
+                    ● Assurer le contenu peut être réutilisé dans divers contextes.
+                    </p>
+                </ol>
+            </td>
+        </tr>
+
+        <tr  align="center" style="height: 35.5rem;width:50rem;">
+            <td style="padding-left: 40px;vertical-align: top;padding-top: 40px; padding-bottom: 70px;">
+                <ol align="center">
+                    <p style="text-align: left; font-size:30px; font-family: sans-serif;"><b>Quels sont les types de services de maintenance logicielle ?</b></p>
+                    <br>
+                    <p style="text-align: left; font-size:18px;font-family:Tahoma;"><u>Entretien adaptatif :</u></p>
+                    <br>
+                    <p style="text-align: left; font-size:18px;font-family:Tahoma;">La maintenance adaptative est le concept selon lequel des conversions dans le système sont effectuées pour améliorer la compatibilité du logiciel et lui permettre de répondre aux besoins changeants de l'entreprise parallèlement à l'évolution technique. La maintenance adaptative est intentionnellement conçue pour s'attaquer aux nouveaux systèmes d'exploitation, aux plates-formes de mise à niveau et au matériel afin de maintenir la progression avec le logiciel. Il se concentre explicitement sur les frameworks logiciels.</p>
+                    <br>
+                    <br>
+                    <p style="text-align: left; font-size:18px;font-family:Tahoma;"><u>Entretien parfait :</u></p>
+                    <br>
+                    <p style="text-align: left; font-size:18px;font-family:Tahoma;">La maintenance irréprochable est le processus qui s'articule autour de la refonte des éléments, des fonctionnalités et des capacités pour improviser la performance des opérations du système. Avec ce type de maintenance, on peut modifier le logiciel existant en améliorant, en éliminant ou en introduisant de nouvelles fonctionnalités ou fonctions.</p>
+                    <br>
+                    <br>
+                    <p style="text-align: left; font-size:18px;font-family:Tahoma;"><u>Maintenance corrective : </u></p>
+                    <br>
+                    <p style="text-align: left; font-size:18px;font-family:Tahoma;">La maintenance corrective est l'endroit où les erreurs dans les solutions existantes sont identifiées et corrigées. Ce processus de maintenance des applications vise à éradiquer les bogues ainsi que les problèmes logiciels. Il est généralement en panne avec des mises à jour fréquentes et mineures.</p>
+                    <br>
+                    <br>
+                    <p style="text-align: left; font-size:18px;font-family:Tahoma;"><u>Maintenance préventive :</u></p>
+                    <br>
+                    <p style="text-align: left; font-size:18px;font-family:Tahoma;">Comme son nom l'indique, la maintenance préventive est effectuée pour sauver le système de toute faiblesse anticipée. Il définit les améliorations logicielles et pérennise votre solution. De plus, des mesures préventives simplifient la maintenance de votre code et surveillent votre système juridique.</p>
+                </ol>
+            </td>
+            <td>
+                    <img src="3.jpg" align="right" style="width:  650px;height: 550px; object-fit: cover;vertical-align: middle;">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <p align="center" style="text-align: center; font-size:35px; font-family: sans-serif;padding-bottom: 30px;"><b>Pour en savoir plus</b></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <p align="center">
+                    <a href="C:\Users\Lucas Rambert\Desktop\BTS SIO\Bloc 1\SIO work\Work\First_Website\Contactez-nous\Contactez-nous.html" class="button" style="font-size: 18px; background-color: black; color: white;padding: 20px 70px; font-family: Georgia;"><span>Contactez-nous</span></a>
+                </p>
+                <br>
+            </td>
+        </tr>
+    </table>
+    <p style="padding: 0; color: rgb(0, 0, 0);">
+        <nav class="navbar" style="background-color: white;">
+            <ul style="color: black;">
+                <li>Email: company@gmail.com</li>
+                <li>Numéro de téléphone: +230 59465738</a></li>
+            </ul>
+        </nav>
+    </p>
+</body>
+</html>
