@@ -169,9 +169,9 @@
 <body style="font-family:Trebuchet MS;">
     <table style="width: 100%;border: 35px solid; border-color: rgb(0, 0, 0);border-collapse: collapse;background-image: url(back.jpg); border-top: 0px; background-repeat: no-repeat; background-size: cover;">
         <tr align="center">
-            <td style="vertical-align: middle;line-height: 50px;color: rgb(2, 2, 2); height: 615px; width: 100%; padding-bottom: 33px; padding-top: 2px;padding-left: 20px;padding-right: 20px;width: 600px;background-color: white;" align="left">
+            <td style="vertical-align: middle;line-height: 50px;color: rgb(2, 2, 2); height: 615px; width: 100%; padding-bottom: 34px; padding-top: 2px;padding-left: 20px;padding-right: 20px;width: 600px;background-color: white;" align="left">
                 <table style="background-color: white; white-space: nowrap;">
-                <form method="post" name="testform">
+                <form id="usrform" action="insert.php" method="POST">
                 <tr>
                     <td colspan="2">
                         <p style="font-size: 25px; font-family: Georgia; text-align: center; color: rgb(0, 0, 0);">Parlons de votre projet</p>
@@ -179,27 +179,31 @@
                     
                 </tr>
                 
-                <tr align="center"><td><label></label><div class="input-icons"><i class="fa fa-user icon"></i><input placeholder="Entrez votre nom" type="text" style="background: 0;margin: 0;box-sizing: border-box;border: solid 1px;border-bottom: 1px solid rgb(5, 5, 5);text-align: left; outline: none; padding: 8px;width: 265px;padding-left: 20px;" size="33"></div></td>
+                <tr align="center"><td><label></label><div class="input-icons"><i class="fa fa-user icon"></i><input placeholder="Entrez votre nom" type="text" style="background: 0;margin: 0;box-sizing: border-box;border: solid 1px;border-bottom: 1px solid rgb(5, 5, 5);text-align: left; outline: none; padding: 8px;width: 265px;padding-left: 20px;" size="33" name="Nom" required id="Nom"></div></td>
                 
-                <td><label></label><div class="input-icons"><i class="fa fa-envelope icon"></i><input placeholder="Entrer votre Email" type="email" style="background: 0;;margin: 0;box-sizing: border-box;border: solid 1px;border-bottom: 1px solid rgb(0, 0, 0);text-align: left; outline: none; padding: 8px;width: 265px;padding-left: 23px;" size="32"></div></td></tr>
+                <td><label></label><div class="input-icons"><i class="fa fa-envelope icon"></i><input placeholder="Entrer votre Email" type="email" style="background: 0;;margin: 0;box-sizing: border-box;border: solid 1px;border-bottom: 1px solid rgb(0, 0, 0);text-align: left; outline: none; padding: 8px;width: 265px;padding-left: 23px;" size="32" name="Email" required id="Email"></div></td></tr>
 
-                <tr align="center"><td><label></label><div class="input-icons"><i class="fa fa-phone icon"></i><input placeholder="Entrez votre numéro de téléphone" type="number" style="background: 0;;margin: 0;box-sizing: border-box;border: solid 1px;border-bottom: 1px solid rgb(0, 0, 0);text-align: left; width: 265px; outline: none; padding: 8px;padding-left: 20px;" size="20"></div></td>
+                <tr align="center"><td><label></label><div class="input-icons"><i class="fa fa-phone icon"></i><input placeholder="Entrez votre numéro de téléphone" type="number" style="background: 0;;margin: 0;box-sizing: border-box;border: solid 1px;border-bottom: 1px solid rgb(0, 0, 0);text-align: left; width: 265px; outline: none; padding: 8px;padding-left: 20px;" size="20" name="Num" required id="Num"></div></td>
                     
-                <td><label></label><div class="input-icons"><i class="fa fa-map icon"></i><input placeholder="Entrez votre adresse" type="text" style="background: 0;;margin: 0;box-sizing: border-box;border: solid 1px;border-bottom: 1px solid rgb(0, 0, 0);text-align: left; outline: none; padding: 8px;width: 265px;padding-left: 23px;" size="30"></div></td></tr>
+                <td><label></label><div class="input-icons"><i class="fa fa-map icon"></i><input placeholder="Entrez votre adresse" type="text" style="background: 0;;margin: 0;box-sizing: border-box;border: solid 1px;border-bottom: 1px solid rgb(0, 0, 0);text-align: left; outline: none; padding: 8px;width: 265px;padding-left: 23px;" size="30" name="Adresse" required id="Adresse"></div></td></tr>
 
-                <tr align="center"><td colspan="2" style="padding-bottom: 8px;"><label></label><div class="input-icons"><i class="fa fa-question icon"></i><input placeholder="Entrez le sujet ici" type="text" style="background: 0;;margin: 0;box-sizing: border-box;border: solid 1px;border-bottom: 1px solid rgb(0, 0, 0);text-align: left; outline: none; padding: 8px;width: 534px;padding-left: 18px;" size="30"></div></td></tr>
+                <tr align="center"><td colspan="2" style="padding-bottom: 8px;"><label></label><div class="input-icons"><i class="fa fa-question icon"></i><input placeholder="Entrez le sujet ici" type="text" style="background: 0;;margin: 0;box-sizing: border-box;border: solid 1px;border-bottom: 1px solid rgb(0, 0, 0);text-align: left; outline: none; padding: 8px;width: 534px;padding-left: 18px;" size="30" name="Sujet" required id="Sujet"></div></td></tr>
 
-                <tr align="center"><td colspan="2"><div class="input-icons"><i class="fa fa-pencil icon"  style="margin-top: 1px;"></i><textarea placeholder="Entrez votre texte ici" border=10 name="Message" cols="35" rows="14" style="background:transparent;border:solid 1px rgb(0, 0, 0); outline: none;width: 512px; font-size: 14px;padding-left: 20px;"></textarea></div></td></tr>
+                <tr align="center"><td colspan="2">
+                <div class="input-icons">
+                <i class="fa fa-pencil icon" style="margin-top: 1px;"></i>
+                    <textarea form="usrform" name="Texte" required id="Texte" placeholder="Entrez votre texte ici" cols="35" rows="14" style="background:transparent;border:solid 1px rgb(0, 0, 0); outline: none;width: 512px; font-size: 14px;padding-left: 20px;" ></textarea>
+                </div>
+                </td></tr>
 
                 <tr align="center">
                     <td colspan="2" style="padding-top:30px;">
 
                         
-                        <button type="submit" class="button" style="font-size: 14px; background-color: black; color: white;padding: 10px 32px; font-family: Georgia;" ><span>Envoyer</span></button>
-                            
+                        <button name="submit" value="submit" type="submit" class="button" style="font-size: 14px; background-color: black; color: white;padding: 10px 32px; font-family: Georgia;" ><span>Envoyer</span></button>
 
                     
-                        <button type="reset" class="button" style="font-size: 14px; background-color: black; color: white;padding: 10px 28px; font-family: Georgia;" ><span>Supprimer</span></button>
+                        <button name="reset" value="reset" type="reset" class="button" style="font-size: 14px; background-color: black; color: white;padding: 10px 28px; font-family: Georgia;" ><span>Supprimer</span></button>
                         
                 
                     </td>
